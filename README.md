@@ -20,9 +20,9 @@ starting from the first class.
 
 | Class   | Theme      | Folder    |
 |:-------:|:-----------|:--------- |
-| 01  | Basic concepts                    | [click here](https://github.com/MariaGabrielaReis/ignite-classes/tree/master/aula_01_05-08-2021) |
-| 02  | Objects and constructor functions | [click here](https://github.com/MariaGabrielaReis/ignite-classes/tree/master/aula_02_11-08-2021) |
-| 03  | Classes                           | [click here](https://github.com/MariaGabrielaReis/ignite-classes/tree/master/aula_03_12-08-2021) |
+| 01  | Basic concepts                    | [click here](https://github.com/MariaGabrielaReis/TPI-classes/tree/master/aula_01_05-08-2021) |
+| 02  | Objects and constructor functions | [click here](https://github.com/MariaGabrielaReis/TPI-classes/tree/master/aula_02_11-08-2021) |
+| 03  | Classes                           | [click here](https://github.com/MariaGabrielaReis/TPI-classes/tree/master/aula_03_12-08-2021) |
 | 04  | Comming soon...                   | --         |
 | 05  | Comming soon...                   | --         |
 
