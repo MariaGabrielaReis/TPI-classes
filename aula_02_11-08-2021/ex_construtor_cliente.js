@@ -6,7 +6,6 @@
  * existir métodos de acesso, get e set. Estes métodos deverão estar disponíveis na própria função construtora
  * do objeto. Para cada atributo, deverão existir métodos que permitam recuperar o valor do atributo em caixa
  * alta e caixa baixa.
- *
  */
 
 function Client(name, email, phone, address) {
@@ -20,6 +19,54 @@ function Client(name, email, phone, address) {
     Object.defineProperty(this, 'description', {
         get: function() {
             return ` ------------------------------ \n Informações do Cliente \n Nome: ${this.getName} \n Email: ${this.getEmail} \n ------------------------------ \n Telefone \n ${this.getPhone} \n ------------------------------ \n Endereço \n ${this.getAddress} \n ------------------------------`;
+        },
+    });
+
+    Object.defineProperty(this, 'nameUpperCase', {
+        get: function() {
+            return this.getName.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'nameLowerCase', {
+        get: function() {
+            return this.getName.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'emailUpperCase', {
+        get: function() {
+            return this.getEmail.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'emailLowerCase', {
+        get: function() {
+            return this.getEmail.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'phoneUpperCase', {
+        get: function() {
+            return this.getPhone.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'phoneLowerCase', {
+        get: function() {
+            return this.getPhone.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'addressUpperCase', {
+        get: function() {
+            return this.getAddress.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'addressLowerCase', {
+        get: function() {
+            return this.getAddress.toLowerCase();
         },
     });
 
@@ -125,6 +172,54 @@ function Address(street, number, district, city, state) {
     Object.defineProperty(this, 'description', {
         get: function() {
             return `Rua: ${this.getStreet} \n Número: ${this.getNumber} \n Bairro: ${this.getDistrict} \n Cidade: ${this.getCity} \n Estado: ${this.getState}`;
+        },
+    });
+
+    Object.defineProperty(this, 'streetUpperCase', {
+        get: function() {
+            return this.getStreet.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'streetLowerCase', {
+        get: function() {
+            return this.getStreet.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'districtUpperCase', {
+        get: function() {
+            return this.getDistrict.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'districtLowerCase', {
+        get: function() {
+            return this.getDistrict.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'cityUpperCase', {
+        get: function() {
+            return this.getCity.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'cityLowerCase', {
+        get: function() {
+            return this.getCity.toLowerCase();
+        },
+    });
+
+    Object.defineProperty(this, 'stateUpperCase', {
+        get: function() {
+            return this.getState.toUpperCase();
+        },
+    });
+
+    Object.defineProperty(this, 'stateLowerCase', {
+        get: function() {
+            return this.getState.toLowerCase();
         },
     });
 

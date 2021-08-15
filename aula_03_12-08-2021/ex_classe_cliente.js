@@ -2,11 +2,9 @@
  * Imagine que você foi contratado(a) para desenvolver um script que possa criar objetos dos tipos cliente,
  * telefone e endereço.
  *
- * No script desenvolvido deverá existir funções construtoras para cada tipo de objeto. Para cada atributo, deverão
- * existir métodos de acesso, get e set. Estes métodos deverão estar disponíveis na própria função construtora
- * do objeto. Para cada atributo, deverão existir métodos que permitam recuperar o valor do atributo em caixa
+ * No script desenvolvido deverá existir classes para cada tipo de objeto e, para cada atributo, deverão
+ * existir métodos de acesso, get e set, além de métodos que permitam recuperar o valor do atributo em caixa
  * alta e caixa baixa.
- *
  */
 
 class Client {
@@ -21,6 +19,34 @@ class Client {
     // métodos personalizados
     description() {
         return ` ------------------------------ \n Informações do Cliente \n Nome: ${this.getName} \n Email: ${this.getEmail} \n ------------------------------ \n Telefone \n ${this.getPhone} \n ------------------------------ \n Endereço \n ${this.getAddress} \n ------------------------------`;
+    }
+
+    nameUpperCase() {
+        return this.getName.toUpperCase();
+    }
+    nameLowerCase() {
+        return this.getName.toLowerCase();
+    }
+
+    emailUpperCase() {
+        return this.getEmail.toUpperCase();
+    }
+    emailLowerCase() {
+        return this.getEmail.toLowerCase();
+    }
+
+    phoneUpperCase() {
+        return this.getPhone.toUpperCase();
+    }
+    phoneLowerCase() {
+        return this.getPhone.toLowerCase();
+    }
+
+    addressUpperCase() {
+        return this.getAddress.toUpperCase();
+    }
+    addressLowerCase() {
+        return this.getAddress.toLowerCase();
     }
 
     // getters
@@ -57,7 +83,6 @@ class Client {
         this.address = address;
     }
 }
-
 class Phone {
     constructor(ddd, number) {
         // atributos personalizados
@@ -88,7 +113,6 @@ class Phone {
         this.number = number;
     }
 }
-
 class Address {
     constructor(street, number, district, city, state) {
         // atributos personalizados
@@ -102,6 +126,34 @@ class Address {
     // métodos personalizados
     description() {
         return `Rua: ${this.getStreet} \n Número: ${this.getNumber} \n Bairro: ${this.getDistrict} \n Cidade: ${this.getCity} \n Estado: ${this.getState}`;
+    }
+
+    streetUpperCase() {
+        return this.getStreet.toUpperCase();
+    }
+    streetLowerCase() {
+        return this.getStreet.toLowerCase();
+    }
+
+    districtUpperCase() {
+        return this.getDistrict.toUpperCase();
+    }
+    districtLowerCase() {
+        return this.getDistrict.toLowerCase();
+    }
+
+    cityUpperCase() {
+        return this.getCity.toUpperCase();
+    }
+    cityLowerCase() {
+        return this.getCity.toLowerCase();
+    }
+
+    stateUpperCase() {
+        return this.getState.toUpperCase();
+    }
+    stateLowerCase() {
+        return this.getState.toLowerCase();
     }
 
     // getters
