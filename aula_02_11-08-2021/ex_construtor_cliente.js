@@ -286,7 +286,9 @@ function Address(street, number, district, city, state) {
     });
 }
 
+// Criando instâncias
 let telefone = new Phone('12', '40028922');
+
 let endereco = new Address(
     'Av. Baguete',
     '21',
@@ -303,3 +305,47 @@ let cliente = new Client(
 );
 
 console.log(cliente.description);
+
+/**
+ * Além disto, o script deve ser robusto, e disponibilizar funções que permitam
+ * realizar ordenação de clientes por nome. Para isso, desenvolva uma função que
+ * receba um Array de clientes e devolva um outro Array, contendo os mesmo clientes,
+ * porém ordenados alfabeticamente pelo nome.
+ */
+
+function organizeClientsByName(clients) {
+    const organizeClients = clients.sort((x, y) => {
+        let a = x.nameUpperCase;
+        let b = y.nameUpperCase;
+
+        if (a == b) {
+            // se o valor tiver a mesma letra, dá nada
+            return 0;
+        } else if (a > b) {
+            // se o valor tiver a letra maior, coloca na frente
+            return 1;
+        } else {
+            // se o valor tiver a letra menor, colca atrás
+            return -1;
+        }
+    });
+    return organizeClients;
+}
+
+// Criação de mais alguns clientes
+let cliente1 = new Client('Jack Frost', 'geada@gelo.com', telefone, endereco);
+let cliente2 = new Client(
+    'Bela Adormecida',
+    'horade@dormir.com',
+    telefone,
+    endereco
+);
+let cliente3 = new Client('Cat Noir', 'adrian@agreste.com', telefone, endereco);
+
+const clientes = [cliente, cliente1, cliente2, cliente3];
+console.table(organizeClientsByName(clientes));
+
+// Para mostrar todos os enderecos
+// for (let i = 0; i < clientes.length; i++) {
+//     console.log(clientes[i].address);
+// }
