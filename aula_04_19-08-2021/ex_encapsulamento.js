@@ -63,7 +63,11 @@ class Client {
     return this.address.description();
   }
   get getPhones() {
-    return this.phones;
+    let allPhones = '';
+    this.phones.forEach(phone => {
+      allPhones += phone.description() + ' ';
+    });
+    return allPhones;
   }
 }
 
@@ -210,7 +214,7 @@ class Company {
   get getPhones() {
     let allPhones = '';
     this.phones.forEach(phone => {
-      allPhones += phone.description();
+      allPhones += phone.description() + ' ';
     });
     return allPhones;
   }
@@ -271,7 +275,7 @@ const empresa = new Company(
   123123123,
   endereco,
   [cliente1, cliente2, cliente3, cliente4, cliente5],
-  [telefone]
+  [telefone, telefone1, telefone2]
 );
 /**
  * Objetivos, parte 3:
@@ -279,20 +283,15 @@ const empresa = new Company(
  */
 function companyDescription(company) {
   console.log(
-    ` ------------------------------ \n Informações da Empresa   \n Nome: ${company.getCorporateName} \n Nome Fantasia: ${company.getFantasyName}  \n CNPJ: ${company.getCnpj} 
-    \n Endereço \n ${company.getAddress} \n ------------------------------ 
-    \n Clientes`
+    ` --------------------------------------- \n - Informações da Empresa   \n Nome: ${company.getCorporateName} \n Nome Fantasia: ${company.getFantasyName}  \n CNPJ: ${company.getCnpj} 
+    \n Endereço \n ${company.getAddress} 
+    \n Telefone \n ${company.getPhones} \n --------------------------------------- \n Clientes`
   );
 
   const clientes = [];
   var i = 0;
   for (let item of company.getClients) {
-    var allPhones = '';
-    item.phones.forEach(phone => {
-      allPhones += phone.description() + ' ';
-    });
-
-    clientes[i] = item.description(allPhones);
+    clientes[i] = item.description(item.getPhones);
     i++;
   }
 
