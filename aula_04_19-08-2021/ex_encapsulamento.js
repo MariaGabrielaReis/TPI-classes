@@ -215,15 +215,7 @@ class Company {
     return allPhones;
   }
   get getClients() {
-    // var allClients = [];
-    // for (let i = 0; i < this.clients.length; i++) {
-    //   var allPhones = '';
-    //   clients[i].phones.forEach(phone => {
-    //     allPhones += phone.description() + ' ';
-    //   });
-    //   allClients[i] = clients[i].description(allPhones);
-    // }
-    // return allClients;
+    return this.clients;
   }
 }
 
@@ -285,26 +277,26 @@ const empresa = new Company(
  * Objetivos, parte 3:
  * Por fim, seu script deve ser capaz de gerar uma descrição da empresa e de seus clientes.
  */
-function description(company) {
+function companyDescription(company) {
   console.log(
     ` ------------------------------ \n Informações da Empresa   \n Nome: ${company.getCorporateName} \n Nome Fantasia: ${company.getFantasyName}  \n CNPJ: ${company.getCnpj} 
     \n Endereço \n ${company.getAddress} \n ------------------------------ 
     \n Clientes`
   );
 
-  //console.table(company.getClients);
+  const clientes = [];
+  var i = 0;
+  for (let item of company.getClients) {
+    var allPhones = '';
+    item.phones.forEach(phone => {
+      allPhones += phone.description() + ' ';
+    });
+
+    clientes[i] = item.description(allPhones);
+    i++;
+  }
+
+  console.table(clientes);
 }
 
-description(empresa);
-
-const clientes = [cliente1, cliente2, cliente3, cliente4, cliente5];
-var allClients = [];
-for (let i = 0; i < clientes.length; i++) {
-  var allPhones = '';
-  clientes[i].phones.forEach(phone => {
-    allPhones += phone.description() + ' ';
-  });
-  allClients[i] = clientes[i].description(allPhones);
-}
-
-console.table(allClients);
+companyDescription(empresa);
