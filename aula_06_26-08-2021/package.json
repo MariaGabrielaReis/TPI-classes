@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "name": "ex_modulo",
+  "version": "1.0",
+  "description": "Classes for clients, phones, address and your own company",
+  "main": "ex_modulo.ts",
+  "author": "Maria Gabriela Reis",
+  "license": "ISC"
+}
