@@ -1,0 +1,14 @@
+{
+  "name": "company_form",
+  "version": "1.0",
+  "description": "Classes for employees, phones, address and your own company",
+  "main": "output/index.js",
+  "author": "Maria Gabriela Reis",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node-dev": "^1.1.8"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/index.ts"
+  }
+}
