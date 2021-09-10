@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "version": "1.0",
+  "description": "Classes for math operations",
+  "main": "output/index.js",
+  "author": "Maria Gabriela Reis",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/index.ts"
+  }
+}

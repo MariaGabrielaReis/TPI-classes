@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2021", //informa como deverá ser o código de saída, após a transcompilação. (o código ts vira uma variante específica do JS)
+    "module": "CommonJS", // forma de resolução na transcompilação (algumas versões antigas do node não suportam os recursos do ES6)
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", //local de saída da compilação
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    // arquivos que devem ser ignoraos na transcompilação
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
